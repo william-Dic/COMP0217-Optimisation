@@ -92,11 +92,11 @@ classdef EKF_Localization < handle % Use handle class for mutable object state
                 'y_max',  arena_height / 2.0 ...
             );
             obj.tof_rel_pos = double([
-                 0.1,  0.0, -0.1; % x-offsets relative to robot center
-                 0.0,  0.1,  0.0  % y-offsets relative to robot center
+                 0.01,  -0.27, -0.01; % x-offsets relative to robot center
+                 0.0,  0.01,  0.01  % y-offsets relative to robot center
             ]);
             obj.tof_rel_angle = double([
-                pi/2, 0.0, -pi/2 % Angle offsets relative to robot yaw
+                pi/2, pi, -pi/2 % Angle offsets relative to robot yaw
             ]);
             obj.epsilon = 1e-6; % Small number
 
